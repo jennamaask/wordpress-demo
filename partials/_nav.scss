@@ -1,0 +1,104 @@
+.desktopMenu { 
+    ul {
+        display: flex;
+        margin-left: 25px;
+        li {
+            a {
+                color: $offWhite;
+                font-family: $bodyText;
+                font-size: .8rem;
+                text-decoration: none;
+                padding: 0 25px;
+                transition: color 0.3s;
+                &:hover, &:focus{
+                    color: $secondaryColor1;
+                }
+            }
+        }
+    }
+}
+.menu-button {
+    display: none;
+}
+.dropDownMenu {
+    display: none;
+}
+
+@media(max-width: 670px){
+    .desktopMenu {
+        display: none;
+    }
+    .menu-button {
+        position: fixed;
+        height: 70px;
+        top: 0;
+        right: 0;
+        width: 70px;
+        display: block;
+        justify-content: flex-end;
+        z-index: 30;
+        transition: background 0.3s, box-shadow 0.3s;
+        background: transparent;
+        border: none;
+        span {
+            background:$offWhite;
+            right:16px;
+            height: 5px;
+            width: 40px;
+            display: block;
+            position: absolute;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+         span:nth-child(1) {
+            top: 20px;
+        }
+        &.open span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 30px;
+        }
+         span:nth-child(2) {
+            top: 32px;
+        }
+        &.open span:nth-child(2) {
+            width: 0;
+            opacity: 0;
+        }
+         span:nth-child(3) {
+            top: 44px;
+        }
+        &.open span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 30px;
+        }
+    }
+    .dropDownMenu {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        transition: right 0.8s, background 0.3s;
+        background: rgba(6, 34, 136, 0.9);
+        z-index: 20;
+        ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        align-items: center;
+        }
+        a {
+            font-size: 3rem;
+        }
+        &.open {
+            right: 0;
+            & + .wrapper {
+                h1 {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

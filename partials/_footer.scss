@@ -1,0 +1,52 @@
+footer {
+    background: $primaryColor;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+            h3 {
+                color: $offWhite;
+                font-size: 2rem;
+                line-height: 30px;
+                letter-spacing: 3.5px;
+                text-transform: uppercase;
+                width: 200px;
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            p {
+                color: $offWhite;
+                font-size: .8rem;
+            }
+            #menu-footer-menu {
+                display: flex;
+            }
+            a {
+                padding: 0;
+                transition: color 0.3s;
+                i {
+                    font-size: 2rem;
+                    padding: 0 5px;
+                }
+                &:hover, &:focus {
+                    color: $secondaryColor1;
+                }
+            }
+        }
+    }
+    @media (max-width: 480px){
+        .wrapper {
+            .left {
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .social-text {
+            display: none;
+        }
+    }
+}

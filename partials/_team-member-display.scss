@@ -1,0 +1,47 @@
+.team-members {
+    background: #0E1041;
+    background: -webkit-radial-gradient(top, #0E1041, #030921);
+    background: -moz-radial-gradient(top, #0E1041, #030921);
+    background: radial-gradient(to bottom, #0E1041, #030921);
+    padding: 100px 70px 50px;
+    h2 {
+        margin: 0;
+        text-align: center;
+    }
+    h3 {
+        color: $secondaryColor1;
+        font-family: $bodyText;
+        margin-top: 0;
+        text-align: center;
+    }
+    h4 {
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+    p {
+        text-align: center;
+        color: $secondaryColor1;
+        margin: 0;
+        font-weight: bold;
+
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        flex-wrap:wrap;
+        .team-member {
+            margin: 0 25px;
+            &:hover {
+                img {
+                    box-shadow: 0px 0px 15px 3px $secondaryColor1;
+                }
+            }
+        }
+        img {
+            border-radius: 50%;
+            transition: box-shadow .3s;
+        }
+    }
+}

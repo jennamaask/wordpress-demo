@@ -1,0 +1,121 @@
+
+.single {
+    .wrapper {
+        position: relative;
+    }
+    h1 {
+        width: 40%;
+        margin: 0;
+        line-height: 1;
+    }
+    .post-categories {
+        display: flex;
+        margin: 0;
+        li {
+            padding-right: 20px;
+        }
+        a {
+            color: $secondaryColor1;
+        }
+    }
+    .entry-title {
+       color: white;
+       position: relative;
+    }
+    .entry-meta {
+        p,a {
+            color: $secondaryColor1;
+            margin: 0;
+            font-size: 2rem;
+            font-family: $bodyText;
+            text-transform: capitalize;
+        }
+    }
+    .title {
+        margin-left: 30px;
+        padding-top: 60px;
+        position: relative;
+    }
+    .post {
+        position: relative;
+    }
+    .entry-image {
+        position: absolute;
+        // top: 5%;
+        bottom: -115px;
+        right: 30px;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        img{
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+    }
+    .entry-content {
+        background: $primaryColor2;
+        margin-top: 40px;
+        padding: 100px 50px 50px;
+        p {
+            color: $offWhite;
+
+        }
+    }
+    .intro-fields {
+        padding-top: 30px;
+        padding-left: 50px;
+        position: relative;
+        h3 {
+            color: $secondaryColor1;
+            font-size: 1.8rem;
+            font-family: $bodyText;
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+           &.bold {
+                font-weight: 700;
+            } 
+            &:first-of-type {
+                margin-top: 10px
+            }
+            span.pink {
+                color: $secondaryColor1;
+            }
+        }
+    }
+    &.single-post {
+        .entry-image {
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media(max-width: 700px){
+        .intro-fields {
+            padding-left: 0;
+        }
+        .entry-image {
+            position: static;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .entry-content {
+            padding: 20px 30px;
+            margin-top: 10px;
+        }
+        .title {
+            margin-left: 0;
+        }
+        .entry-meta {
+            p{
+                font-size: 1rem;
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

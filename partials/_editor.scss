@@ -1,0 +1,33 @@
+.wp-block {
+    max-width: 800px;
+}
+
+.editor-post-title {
+    color: $offWhite;
+    font-family: $headingText;
+}
+.wp-block-button__link {
+     border: 2px solid $secondaryColor1;
+    padding: 5px 7px;
+    background: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: $bodyText;
+    color: $offWhite;
+}
+body {
+    min-height: unset;
+    display: block;
+    &.mce-content-body {
+        background-image: none;
+        p, a, li {
+            color: black;
+        }
+    }
+}
+
+
+.editor-post-title__input::placeholder, .block-editor-default-block-appender__content::placeholder {
+    color: $offWhite;
+    opacity: 0.8;
+}

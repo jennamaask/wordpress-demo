@@ -1,0 +1,18 @@
+
+
+.tapered-block {
+    width: 90%;
+    margin: 0 auto;
+    background: $primaryColor2;
+    padding: 60px;
+    h2 {
+        text-align: center;
+        margin-top: 0;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    @media(max-width: 500px){
+        padding: 30px;
+    }
+}
